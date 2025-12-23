@@ -1,0 +1,293 @@
+.education {
+  background: #f8f9fa;
+}
+
+.education-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.education-main {
+  display: flex;
+  flex-direction: column;
+  gap: 32px; /* 👈 THIS CREATES SPACE BETWEEN CARDS */
+}
+
+.degree-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #3498db;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.degree-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.degree-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.degree-icon {
+  font-size: 3rem;
+  color: #3498db;
+  flex-shrink: 0;
+}
+
+.degree-info {
+  flex: 1;
+}
+
+.degree-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.institution-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #555;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.institution-icon {
+  color: #3498db;
+}
+
+.degree-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.detail-label {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.detail-value {
+  color: #555;
+}
+
+.detail-icon {
+  color: #3498db;
+}
+
+.degree-highlights h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.degree-highlights ul {
+  list-style: none;
+  padding: 0;
+}
+
+.degree-highlights li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.degree-highlights li::before {
+  content: "🎓";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.certifications-section {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.certifications-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+.cert-title-icon {
+  color: #3498db;
+  font-size: 1.8rem;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.certification-card {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.certification-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.cert-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cert-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.cert-info {
+  flex: 1;
+}
+
+.cert-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
+}
+
+.cert-issuer {
+  color: #3498db;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.cert-description {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.certificate-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.certificate-content {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  max-width: 90vw;
+  max-height: 90vh;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  overflow: auto;
+}
+
+.certificate-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .degree-card,
+  .certifications-section {
+    padding: 2rem;
+  }
+
+  .degree-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .degree-title {
+    font-size: 1.5rem;
+  }
+
+  .degree-details {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cert-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .certifications-title {
+    font-size: 1.3rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .degree-card,
+  .certifications-section {
+    padding: 1.5rem;
+  }
+
+  .degree-icon {
+    font-size: 2.5rem;
+  }
+
+  .degree-title {
+    font-size: 1.3rem;
+  }
+
+  .institution-info {
+    font-size: 1rem;
+  }
+}

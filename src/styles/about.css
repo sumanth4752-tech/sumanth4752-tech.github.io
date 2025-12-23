@@ -1,0 +1,123 @@
+.about {
+  background: #ffffff;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.intro {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.personal-info {
+  margin-top: 2rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.info-icon {
+  color: #3498db;
+  font-size: 1.2rem;
+}
+
+.about-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.highlight-card {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 2rem;
+  border-radius: 10px;
+  border-left: 4px solid #3498db;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-card h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.highlight-card p {
+  color: #555;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.nss-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.nss-icon {
+  color: #3498db;
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  flex-shrink: 0;
+}
+
+.nss-info div p {
+  margin-bottom: 0.3rem;
+}
+
+.nss-info strong {
+  color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+
+  .intro {
+    font-size: 1.1rem;
+  }
+
+  .highlight-card {
+    padding: 1.5rem;
+  }
+
+  .nss-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nss-icon {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+}
